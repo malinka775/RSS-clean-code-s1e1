@@ -13,7 +13,7 @@ body {
 .matrix img {
   width: 100%;
 }
-.matrix .more_inf {
+.matrix__info {
   font-family: fantasy, cursive;
 }
 
@@ -23,6 +23,10 @@ body {
     text-align: center;
   }
 
+}
+
+#task-adder {
+  margin: 16px 0;
 }
 .todo {
   display: block;
@@ -34,8 +38,9 @@ body {
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.flex-wrapper {
   display: flex;
+  margin-top: 20px;
 }
 ul {
   margin: 0;
@@ -62,8 +67,7 @@ button{
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -89,10 +93,7 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
+
 #new-task {
   width: 318px;
 }
@@ -123,12 +124,12 @@ li > label {
 li > input[type="text"] {
   width: 226px;
 }
-.delete img {
+.button_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete img:hover {
+.button_delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -143,11 +144,11 @@ ul li input[type=text] {
   display: none;
 }
 
-ul .edit input[type=text] {
+ul .button_edit input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-ul .edit label {
+ul .button_edit label {
   display: none;
 }
